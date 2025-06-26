@@ -1,6 +1,6 @@
 import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -10,12 +10,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-secondary text-white py-6 uppercase fixed left-0 right-0 top-0 z-10">
+      <nav className="bg-secondary text-white py-6 uppercase fixed left-0 top-0 w-full z-10">
         <div className="container flex justify-between ">
           <h1>
-            <NavLink to="/" className="text-2xl font-semibold">
+            <Link to="/home" className="text-2xl font-semibold">
               start framework
-            </NavLink>
+            </Link>
           </h1>
           <ul
             className={`mobile medium transition-all duration-300 ${

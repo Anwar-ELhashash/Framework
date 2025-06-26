@@ -1,20 +1,28 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import { RouterProvider } from "react-router";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Home from "./pages/Home/Home";
-import Portfolio from "./pages/Portfolio/Portfolio";
-import Notfound from "./components/Notfound/Notfound";
-import Login from "./pages/Login/Login";
+// Project Components
+import About from "./pages/About/About.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Portfolio from "./pages/Portfolio/Portfolio.jsx";
+import Notfound from "./components/Notfound/Notfound.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 
 const routes = createBrowserRouter([
-  { index: true, element: <Navigate to="/home" /> },
-  { path: "/home", element: <Home /> },
-  { path: "/about", element: <About /> },
-  { path: "/portfolio", element: <Portfolio /> },
-  { path: "/contact", element: <Contact /> },
-  { path: "/login", element: <Login /> },
-  { path: "*", element: <Notfound /> },
+  {
+    path: "",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Navigate to="/home" /> },
+      { path: "/home", element: <Home /> },
+      { path: "/about", element: <About /> },
+      { path: "/portfolio", element: <Portfolio /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/login", element: <Login /> },
+      { path: "*", element: <Notfound /> },
+    ],
+  },
 ]);
 
 function App() {

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 export default function Notfound() {
   return (
@@ -9,12 +9,12 @@ export default function Notfound() {
             <p className=" text-red-700 font-semibold uppercase">
               Page You Are Looking For Is Not Found!
             </p>
-            <NavLink
+            <Link
               className="px-3 py-2 bg-white text-blue-500 font-semibold rounded-md transition-all duration-300 hover:bg-blue-500 hover:text-white"
               to="/home"
             >
               Home Page
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>

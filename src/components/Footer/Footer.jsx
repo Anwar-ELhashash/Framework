@@ -10,7 +10,6 @@ export default function Footer() {
             <p className="mb-1">2215 John Daniel Drive</p>
             <p>Clark, MO 65243</p>
           </div>
-
           <div className="flex-1">
             <h4 className="mb-2 text-xl font-semibold">AROUND THE WEB</h4>
             <ul className="flex gap-2 justify-center">
@@ -40,6 +39,12 @@ export default function Footer() {
           <div className="flex-1">
             <h4 className="mb-2 text-xl font-semibold">About Freelancer</h4>
             <p>Freelance is a free to use, licensed Bootstrap theme created by Route</p>
+          </div>
+        </div>
+
+        <div className="Copyright bg-copyright py-5">
+          <div className="container ">
+            <p className="text-white text-center">Copyright © Your Website 2021</p>
           </div>
         </div>
       </footer>
